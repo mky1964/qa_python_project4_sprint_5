@@ -29,7 +29,7 @@ class TestSBurgersRegPositive:
         assert  WebDriverWait(driver, 5).until(EC.presence_of_element_located(Locators.AUTH_ENTER_TEXT))#Проверка наличия  элемента с текстом 'Вход' заголовка в форме авторизации
 
 class TestSBurgersRegNegativePass:
-    def test_reg_negative_password(self,driver):# Негативный тест на ввод пароля (вводиться 4 символа
+    def test_reg_negative_password(self,driver):# Негативный тест на ввод пароля (вводиться 4 символа)
         email = faker.email()
         name ='Вася'
 

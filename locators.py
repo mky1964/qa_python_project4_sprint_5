@@ -9,9 +9,9 @@ class Locators:
     CABINET_BUTTON = (By.XPATH, "//p[text()='Личный Кабинет']")#Кнопка личного кабинета из главной страницы
     PROFILE_LOGIN = (By.XPATH, '//li[2][@class="Profile_profileListItem__2th0t mb-6"]//input')#LOGIN в Профиле
     CABINET_CONSTRUCTOR_BUTTON = (By.XPATH,  '//a[@class="AppHeader_header__link__3D_hX" and @href="/"]' )#Кнопка перехода из ЛК в Корструктор
-    CABINET_LOGO_BUTTON = (By.XPATH, "//a[@class='AppHeader_header__link__3D_hX' and @href='/']")#Кнопка LOGO в конструкторе
+    CABINET_LOGO_BUTTON = (By.XPATH, '//div[@class="AppHeader_header__logo__2D0X2"]/a[@href="/"]')#Кнопка LOGO в конструкторе ("//a[@class='AppHeader_header__link__3D_hX' and @href='/']")
     CABINET_EXIT_BUTTON = (By.XPATH, "//button[@class ='Account_button__14Yp3 text text_type_main-medium text_color_inactive']")#Кнопка ВЫХОД из ЛК
-    AUTH_ENTER_TEXT = (By.XPATH, '//main//h2')#Текст ВХОД в форме авторизации
+    AUTH_ENTER_TEXT = (By.XPATH, '//main//h2[text()="Вход"]')#Текст ВХОД в форме авторизации
     CONSTRUCT_BURGER = (By.XPATH, '//h1[text()="Соберите бургер"]')#Элемент "Соберите бургер" в Конструкторе
     CABINET_REGISTRATION_BUTTON = (By.XPATH, '//a[@href="/register"]')#Кнопка ЗАРЕГИСТРИРОВАТЬСЯ в ЛК
     REGISTRATION_NAME_PLACEHOLDER_NAME =(By.XPATH, '//label[text()="Имя"]')#Название плейсхолдера "Имя" в форме регистрации
@@ -26,6 +26,6 @@ class Locators:
     FILLINGS_BUTTON = (By.XPATH, '//span[text()="Начинки"]')#Кнопка Начинки
     SAUCES_BUTTON = (By.XPATH, '//span[text()="Соусы"]')#Кнопка Соусы
     BREAD_BUTTON = (By.XPATH, '//span[text()="Булки"]')#Кнопка Булки
-    BREAD_BUTTON_STATUS =(By.XPATH, '//main/section[1]/div[1]/div[1]')#Статус кнопки Булки
-    SAUCES_BUTTON_STATUS =(By.XPATH, '//main//div/div[2]')#Статус кнопки Соусы
-    FILLINGS_BUTTON_STATUS =(By.XPATH, '//main//div/div[3]')#Статус кнопки Начинки
+    BREAD_BUTTON_STATUS =(By.XPATH, '//span[text()="Булки"]/parent::div')#Статус кнопки Булки
+    SAUCES_BUTTON_STATUS =(By.XPATH, '//span[text()="Соусы"]/parent::div')#Статус кнопки Соусы
+    FILLINGS_BUTTON_STATUS =(By.XPATH, '//span[text()="Начинки"]/parent::div')#Статус кнопки Начинки

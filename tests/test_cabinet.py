@@ -13,7 +13,6 @@ class TestSBurgersCabinet:
         WebDriverWait(driver, 5).until(EC.presence_of_element_located(Locators.PROFILE_LOGIN))#ожидание "LOGIN" в Профиле
         driver.find_element(*Locators.CABINET_CONSTRUCTOR_BUTTON).click()#Переход в Конструктор
 
-        print(WebDriverWait(driver, 5).until(EC.presence_of_element_located(Locators.CONSTRUCT_BURGER)))
         assert WebDriverWait(driver, 5).until(EC.presence_of_element_located(Locators.CONSTRUCT_BURGER))#Поверка наличия элемента "Соберите бургер"
 
 
